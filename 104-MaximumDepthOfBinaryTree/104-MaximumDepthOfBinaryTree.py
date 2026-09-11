@@ -1,0 +1,10 @@
+# Last updated: 9/11/2026, 1:42:07 PM
+class Solution:
+    def maxDepth(self, root):
+        if root is None:
+            return 0
+
+        left = self.maxDepth(root.left)
+        right = self.maxDepth(root.right)
+
+        return 1 + max(left, right)
